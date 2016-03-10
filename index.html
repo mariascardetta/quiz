@@ -1,0 +1,235 @@
+<style>
+body {
+background-color: ;
+background-image: url("makeup3.jpg");
+font-family: Helvetica;
+}
+
+#main {
+width: 90%;
+max-width: 1000px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background: beige;
+background-image: url("brushes2.jpg");
+color: white;
+font-size:20px;
+color:#000;
+text-shadow:1px 1px 0 #fff,
+-1px -1px 0 #fff,
+1px -1px 0 #fff,
+-1px 1px 0 #fff,
+0px 1px 0 #fff,
+1px 0px 0 #fff,
+0px -1px 0 #fff,
+-1px 0px 0 #fff,
+4px 4px 3px #000;
+}
+
+
+#rcorners {
+    border-radius: 25px;
+    background: #AE79F4;
+    padding: 20px; 
+    width: px;
+    height: px; 
+    
+}
+
+#padding {
+padding: 10px;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="main"><!-- open main div -->
+<div id="header"><!-- open header div -->
+<h1>What makeup trend should you try next? </h1>
+</div><!-- close header div -->
+<form  id="form1" action=" ">
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>How much makeup do you use on a daily basis?</p>
+<input type="radio" name="amount" value="10" />None.<br />
+<input type="radio" name="amount" value="20" />Just a little (for example to even out your skin tone.<br />
+<input type="radio" name="amount" value="30" />An average amount (enough to notice their is make up on)<br />
+<input type="radio" name="amount" value="40" />I put on a full face every day!<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>You would describe your makeup style as...</p>
+<input type="radio" name="style" value="10" />I don't use make up so I do not have a specific style<br />
+<input type="radio" name="style" value="20" />Simple, girl/boy on the go.<br />
+<input type="radio" name="style" value="30" />I'm going for that effortless look but I did put effort into it.<br />
+<input type="radio" name="style" value="40" />I could be Kim Kardashians makeup artist!<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>How much time would you like to put towards doing your makeup?</p>
+<input type="radio" name="time" value="10" />It's going to take me time to do this?<br />
+<input type="radio" name="time" value="20" />5 minutes or less<br />
+<input type="radio" name="time" value="30" />Maybe 20 minutes tops. I'm patient<br />
+<input type="radio" name="time" value="40" />I don't leave the house until I'm fabulous! A queen is never late, everyone is simply early.<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>How quickly do you adopt trends?</p>
+<input type="radio" name="trend" value="10" />I'm a laggard. I'm last to know<br />
+<input type="radio" name="trend" value="20" />I wait for my friends to try them first<br />
+<input type="radio" name="trend" value="30" />I don't mind trying out new things. No harm no foul<br />
+<input type="radio" name="trend" value="40" />Adopt them? I start them!<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>Which actress do you look towards for makeup inspiration?</p>
+<input type="radio" name="actress" value="10" /> Zoe Saldana- I enjoy her natural look<br />
+<input type="radio" name="actress" value="20" /> Angelina Jolie- I enjoy her simplicity<br />
+<input type="radio" name="actress" value="30" /> The Kardashians- She is a trend setter<br />
+<input type="radio" name="actress" value="40" /> Ms. Lawrence form the Atlanta Housewives- He isn't afraid to break the rules<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>Are you interested in trying out new makeup ideas?</p>
+<input type="radio" name="interest" value="10" />I'm skeptical but willing<br />
+<input type="radio" name="interest" value="20" />I think it will be fun!<br />
+<input type="radio" name="interest" value="30" />I always look for new things to try out<br />
+<input type="radio" name="interest" value="40" />I'm ready for a challenge<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>How much do you spend on makeup?</p>
+<input type="radio" name="money" value="10" />0-10 dollars<br />
+<input type="radio" name="money" value="20" />11-20 dollars<br />
+<input type="radio" name="money" value="30" />22+<br />
+<input type="radio" name="money" value="40" />If it is an amazing product money is not relavant<br />
+</div>
+<div id="padding">
+</div>
+<div id="rcorners">
+<p>Why do you want to try out a new makeup trend?</p>
+<input type="radio" name="reason" value="10" />I usually don't wear makeup but I want to give it a try<br />
+<input type="radio" name="reason" value="20" />I want to change up my look a little<br />
+<input type="radio" name="reason" value="30" />I'm ready to for a new style <br />
+<input type="radio" name="reason" value="40" />I am always looking for new and improved trends to showcase<br />
+</div>
+<div id="padding">
+</div>
+
+
+
+
+
+
+<input type="submit" value="Submit">
+</form>
+
+<p>Your result is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+    variablevar = document.getElementsByName("amount");
+	for(i=0; i<variablevar.length; i++) {
+	   if (variablevar[i].checked) {
+	   vscore = parseInt(variablevar[i].value);
+	   }
+	   }//end for
+	   
+	subvar = document.getElementsByName("style");
+	   for(i=0; i<subvar.length; i++) {
+	   if (subvar[i].checked) {
+	   sscore = parseInt(subvar[i].value);
+	   }
+	   }//end for
+	   
+	convar = document.getElementsByName("time");
+	   for(i=0; i<convar.length; i++) {
+	   if (convar[i].checked) {
+	   cscore = parseInt(convar[i].value);
+	   }
+	   }//end for
+	   
+	ifvar = document.getElementsByName("trend");
+	   for(i=0; i<ifvar.length; i++) {
+	   if (ifvar[i].checked) {
+	   iscore = parseInt(ifvar[i].value);
+	   }
+	   }//end for
+	   
+	   extravar = document.getElementsByName("actress");
+	   for(i=0; i<extravar.length; i++) {
+	   if (extravar[i].checked) {
+	   escore = parseInt(extravar[i].value);
+	   }
+	   }//end for
+	   
+	   interestvar = document.getElementsByName("interest");
+	   for(i=0; i<interestvar.length; i++) {
+	   if (interestvar[i].checked) {
+	   fscore = parseInt(interestvar[i].value);
+	   }
+	   }//end for
+	   
+	   moneyvar = document.getElementsByName("money");
+	   for(i=0; i<moneyvar.length; i++) {
+	   if (moneyvar[i].checked) {
+	   gscore = parseInt(moneyvar[i].value);
+	   }
+	   }//end for
+	
+	 reasonvar = document.getElementsByName("reason");
+	   for(i=0; i<reasonvar.length; i++) {
+	   if (reasonvar[i].checked) {
+	   lscore = parseInt(reasonvar[i].value);
+	   }
+	   }//end for
+	   
+	   
+	result = vscore + sscore + cscore +iscore + escore + fscore + gscore + lscore;
+	document.getElementById("grade").innerHTML = result;
+	   if (result >= 0 && result <= 100) {result2 = "You should try strobing! This may seem complicated but it is actually super easy and you will still maintain the natural look that you like. All you have to do is apply fondation and powder to even out your skin tone (this is just a basic step with all makeup routines) and then apply a highlight to your cheek bones and bridge of your nose. It gives off a natural glow with MINIMUM effort. Less than 5 minutes I promise.<br /><img src='strobe.jpg' width='300' />"};
+    if (result >= 101 && result <= 180) {result2 = "You should try a wing eyeliner! Also known as cat eyes. And I don't mean just the normal one that you probably already do. Take the extra few minutes to try something new and fun. Cosmo always has cute ideas for wing eyeliner with a twist. Or add eyeshadow like Jolie did in the picture below. The best part is it won't even cost that much money to get a perfect winged look. Elf cosmatics have amazing products at an affordable price. I recommend their cream eyeliner<br /><img src='cateyes.jpg' width='300' />"};
+    if (result >= 181 && result <= 240) {result2 = "It's time to get your contour on! You know enough about makeup that you are ready to try someting challenging. Contouring isn not the latest trend but it is still the most talked about. The pictures may look scary but it is actually easier than you think, just a little time consuming. There are cheaper countouring kits at ULTA cosmetics and NYX if you don't want to spend top dollar and they work just as well!<br /><img src='contour.jpg' width='300' />"};
+    if (result >= 241 && result <= 400) {result2 = "You are the trend setter! I should be asking you what to do! But if you would like to take my advice I say bring the colors back and I mean all the pastel, bright colors you want. Don't be afraid of the bright colors this coming spring. Go all out with eyeshadows and liners. Next time you go out on the town ditch the smokey eye and go for the pop of color instead.<br /><img src='bright.jpg' width='300' />"};
+
+document.getElementById("grade2").innerHTML = result2; 
+
+    
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div><!-- close main div -->
+</body>
+
+
+
+
+</div>
+</body>
+</html>
+
